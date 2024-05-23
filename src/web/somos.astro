@@ -1,0 +1,50 @@
+---
+import logo from '../assets/img/Logo.png';
+---
+
+<section class="somos">
+    <div class="wrapper somos-wrapper">
+        <div class="somos-content">
+            <article class="somos-article">
+                <h2 class="somos-tittle">Somos Chalice Club</h2>
+                <p class="somos-description">
+                    Chalice Club es lo que siempre habías buscado, un sitio cuidado hasta el último detalle donde poder tomar algo agusto, en un gran ambiente, con una atención inmejorable, música de todos los estilos y una gran variedad de bebidas y sishas.
+                </p>
+                <p class="somos-description">
+                    Queremos que Chalice Club sea tu punto de referencia y por ello mimamos y cuidamos el trato al cliente, para que vengas a disfrutar con tus amigos, familia o compañeros. Disponemos de reservados para celebraciones.
+                </p>
+                <p class="somos-description">
+                    Chalice Club está en Avda. de Levante 187 (frente a la guardia civil) abrimos de martes a domingo variando el horario de cierre según avanza la semana.
+                </p>
+            </article>
+            <img src={logo.src} alt="">
+        </div>
+    </div>
+</section>
+
+<style>
+
+    .somos{
+        background-color: black;
+    }
+
+    .somos-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .somos-article{
+        color: rgb(255, 208, 90);
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .somos-tittle{
+        font-size: 40px;
+        font-family: "Playfair Display", serif;;
+    }
+</style>

@@ -1,0 +1,102 @@
+---
+import logo from '../assets/img/Logo.png';
+---
+
+<script>
+    const nav = document.getElementById("nav");
+    nav.style.backgroundColor = "transparent";
+    nav.style.maxHeight = "0px"
+
+    window.addEventListener("scroll",() => {
+        let scrollY = window.scrollY;
+        if (scrollY >= 50) {
+        nav.style.backgroundColor = "#000";
+        nav.style.maxHeight = "200px"
+        nav.style.color = "rgb(255, 208, 90)";
+        } else {
+          nav.style.backgroundColor = "transparent";
+          nav.style.maxHeight = "0px"
+          nav.style.color = "white";
+        }
+    })
+</script>
+
+<nav class="nav" id="nav">
+    <div class="wrapper nav-wrapper">
+        <img src={logo.src} width={100} height={100} alt="Logo" />
+        <ul class="list">
+            <li class="list-item">
+                <a class="item-link" href="#">INICIO</a>
+            </li>
+            <li class="list-item">
+                <a class="item-link" href="#">SOMOS</a>
+            </li>
+            <li class="list-item">
+                <a class="item-link" href="#">SERVICIOS</a>
+            </li>
+            <li class="list-item">
+                <a class="item-link" href="#">CÓCTELES</a>
+            </li>
+            <li class="list-item">
+                <a class="item-link" href="#">GALERÍA</a>
+            </li>
+            <li class="list-item">
+                <a class="item-link" href="#">EVENTOS</a>
+            </li>
+            <li class="list-item">
+                <a class="item-link" href="#">RESERVADOS</a>
+            </li>
+            <li class="list-item">
+                <a class="item-link" href="#">LOCALIZACIÓN</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    
+    .nav{
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        transition: all 0.6s ease;
+        z-index: 100;
+       
+    }
+
+    .nav-wrapper
+    {
+        width: 100%;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+
+    .list{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .list-item{
+        list-style: none;
+    }
+
+    .item-link{
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 50px;
+        font-weight: 700;
+        color: inherit;
+    }
+
+
+
+</style>

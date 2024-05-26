@@ -1,0 +1,108 @@
+
+<section class="info">
+    <div class="wrapper info-wrapper">
+        <div class="content">
+            <div class="horario">
+                <div class="info-tittle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path><path d="M13 7h-2v6h6v-2h-4z"></path></svg>
+                    <h3>Horario</h3>
+                </div>
+                <div class="info-content">
+                    <p class="info-item info-strong">Lunes - Martes - Miércoles</p>
+                    <p class="info-item">cerrado</p>
+                    <p class="info-item info-strong">Jueves</p>
+                    <p class="info-item">20:00 - 03:00</p>
+                    <p class="info-item info-strong">Viernes y Sábados</p>
+                    <p class="info-item">20:00 - 06:00</p>
+                    <p class="info-item info-strong">Domingos</p>
+                    <p class="info-item">17:00 - 01:00</p>
+                </div>
+            </div>
+            <div class="localizacion">
+                <div class="info-tittle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><circle cx="12" cy="12" r="4"></circle><path d="M13 4.069V2h-2v2.069A8.01 8.01 0 0 0 4.069 11H2v2h2.069A8.008 8.008 0 0 0 11 19.931V22h2v-2.069A8.007 8.007 0 0 0 19.931 13H22v-2h-2.069A8.008 8.008 0 0 0 13 4.069zM12 18c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z"></path></svg>
+                    <h3>Localización</h3>
+                </div>
+                <div class="info-content">
+                    <p class="info-item info-strong">Chalice club:</p>
+                    <p class="info-item">Avda. Levante 236 (frente a Guardia Civil)</p>
+                    <p class="info-item">28521 Rivas Vaciamadrid</p>
+                    <p class="info-item">Madrid</p>
+                </div>
+            </div>
+            <div class="contacto">
+                <div class="info-tittle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M21 2H6a2 2 0 0 0-2 2v3H2v2h2v2H2v2h2v2H2v2h2v3a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zm-8 2.999c1.648 0 3 1.351 3 3A3.012 3.012 0 0 1 13 11c-1.647 0-3-1.353-3-3.001 0-1.649 1.353-3 3-3zM19 18H7v-.75c0-2.219 2.705-4.5 6-4.5s6 2.281 6 4.5V18z"></path></svg>
+                    <h3>Contacto</h3>
+                </div>
+                <div class="info-content">
+                    <p class="info-item info-strong">Teléfono:</p>
+                    <p class="info-item">829 827 1729</p>
+                    <p class="info-item info-strong">Email:</p>
+                    <p class="info-item">jamdev0101@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</section>
+
+<style>
+    
+    .info{
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+        background-color: white;
+    }
+
+    .content{
+        width: 100%;
+        display: flex;
+        gap: 150px;
+    }
+
+    .info-tittle{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .info-content{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info-item{
+        color: rgb(100, 100, 100);
+    }
+
+    .info-item.info-strong{
+        color: rgb(100, 100, 100);
+        font-weight: bold;
+    }
+
+    .footer-chalice{
+        padding: 50px;
+        background-color: rgba(226, 226, 226, 0.397);
+
+    }
+
+    .footer-chalice p{
+        color: rgb(104, 104, 104);
+        text-align: center;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 768px){
+        .content{
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+</style>

@@ -2,7 +2,7 @@
 
 ---
 
-<section class="servicios">
+<section class="servicios" id="servicios">
     <div class="wrapper servicios-wrapper">
         <div class="servicios-content">
             <h2 class="servicios-tittle" >Servicios</h2>
@@ -63,17 +63,24 @@
     }
 
     .servicios-imagen{
-        margin: 10px;
+        margin: 5px;
         border-radius: 10px;
     }
 
     .servicios-nombre{
-        margin: 10px;
+        margin: 5px;
         font-family: "Playfair Display", serif;
         font-size: 25px;
     }
 
     .servicios-parrafo{
         margin: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .servicios-list{
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 </style>

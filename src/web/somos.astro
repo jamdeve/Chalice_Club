@@ -2,7 +2,7 @@
 import logo from '../assets/img/Logo.png';
 ---
 
-<section class="somos">
+<section class="somos" id="somos">
     <div class="wrapper somos-wrapper">
         <div class="somos-content">
             <article class="somos-article">
@@ -17,7 +17,7 @@ import logo from '../assets/img/Logo.png';
                     Chalice Club está en Avda. de Levante 187 (frente a la guardia civil) abrimos de martes a domingo variando el horario de cierre según avanza la semana.
                 </p>
             </article>
-            <img src={logo.src} alt="">
+            <img class="logo" src={logo.src} alt="">
         </div>
     </div>
 </section>
@@ -46,5 +46,21 @@ import logo from '../assets/img/Logo.png';
     .somos-tittle{
         font-size: 40px;
         font-family: "Playfair Display", serif;;
+    }
+    @media screen and (max-width: 768px) {
+        .somos-article{
+            width: 90%;
+        }
+
+        .somos-tittle{
+            margin-top: 20px
+        }
+        .somos-content{
+            flex-direction: column;
+        }
+
+        .logo{
+            max-width: 70%;
+        }
     }
 </style>

@@ -2,7 +2,7 @@
 
 ---
 
-<section class="reservados">
+<section class="reservados" id="reservados">
     <div class="wrapper reservados-wrapper">
         <div class="reservados-content">
             <img src="../../public/imagenes/chalice-reservado.jpg" alt="">
@@ -52,6 +52,21 @@
     img{
         flex: 1;
         max-width: 50%;
+    }
+
+    @media screen and (max-width: 768px){
+        .reservados-content{
+            flex-direction: column;
+            padding: 100px 0;
+        }
+
+        .reservados-article{
+            width: 80%;
+        }
+
+        img{
+            max-width: 80%;
+        }
     }
 
 </style>

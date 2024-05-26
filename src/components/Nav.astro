@@ -4,6 +4,8 @@ import logo from '../assets/img/Logo.png';
 
 <script>
     const nav = document.getElementById("nav");
+    const menuMobile = document.getElementById("menu-mobile");
+    const modalMobile = document.getElementById("mobile-modal")
     nav.style.backgroundColor = "transparent";
     nav.style.maxHeight = "0px"
 
@@ -19,35 +21,68 @@ import logo from '../assets/img/Logo.png';
           nav.style.color = "white";
         }
     })
+
+    menuMobile.addEventListener("click",() => {
+        modalMobile.classList.toggle("disable");
+    })
+
+
 </script>
 
 <nav class="nav" id="nav">
     <div class="wrapper nav-wrapper">
         <img src={logo.src} width={100} height={100} alt="Logo" />
+        <svg class="menu-mobile" id="menu-mobile" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+        <div class="menu-mobile-modal disable" id="mobile-modal">
+            <div class="menu-mobile-container">
+                <ul class="mobile-list">
+                    <li class="mobile-list-item">
+                        <a class="mobile-item-link" href="#inicio">INICIO</a>
+                    </li>
+                    <li class="mobile-list-item">
+                        <a class="mobile-item-link" href="#somos">SOMOS</a>
+                    </li>
+                    <li class="mobile-list-item">
+                        <a class="mobile-item-link" href="#servicios">SERVICIOS</a>
+                    </li>
+                    <li class="mobile-list-item">
+                        <a class="mobile-item-link" href="#cocteles">CÓCTELES</a>
+                    </li>
+                    <li class="mobile-list-item">
+                        <a class="mobile-item-link" href="#galeria">GALERÍA</a>
+                    </li>
+                    <li class="mobile-list-item">
+                        <a class="mobile-item-link" href="#eventos">EVENTOS</a>
+                    </li>
+                    <li class="mobile-list-item">
+                        <a class="mobile-item-link" href="#reservados">RESERVADOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
         <ul class="list">
             <li class="list-item">
-                <a class="item-link" href="#">INICIO</a>
+                <a class="item-link" href="#inicio">INICIO</a>
             </li>
             <li class="list-item">
-                <a class="item-link" href="#">SOMOS</a>
+                <a class="item-link" href="#somos">SOMOS</a>
             </li>
             <li class="list-item">
-                <a class="item-link" href="#">SERVICIOS</a>
+                <a class="item-link" href="#servicios">SERVICIOS</a>
             </li>
             <li class="list-item">
-                <a class="item-link" href="#">CÓCTELES</a>
+                <a class="item-link" href="#cocteles">CÓCTELES</a>
             </li>
             <li class="list-item">
-                <a class="item-link" href="#">GALERÍA</a>
+                <a class="item-link" href="#galeria">GALERÍA</a>
             </li>
             <li class="list-item">
-                <a class="item-link" href="#">EVENTOS</a>
+                <a class="item-link" href="#eventos">EVENTOS</a>
             </li>
             <li class="list-item">
-                <a class="item-link" href="#">RESERVADOS</a>
-            </li>
-            <li class="list-item">
-                <a class="item-link" href="#">LOCALIZACIÓN</a>
+                <a class="item-link" href="#reservados">RESERVADOS</a>
             </li>
         </ul>
     </div>
@@ -77,6 +112,12 @@ import logo from '../assets/img/Logo.png';
     
     }
 
+    .menu-mobile{
+        display: none;
+        position: relative;
+        z-index: 100;
+    }
+
     .list{
         display: flex;
         justify-content: center;
@@ -97,6 +138,60 @@ import logo from '../assets/img/Logo.png';
         color: inherit;
     }
 
+    .menu-mobile-modal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.897);
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .menu-mobile-container{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        
+    }
+
+    .mobile-list{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .mobile-list-item{
+        list-style: none;
+    }
+
+    .mobile-item-link{
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+    }
+
+    .disable{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    @media screen and (max-width: 768px) {
+        .menu-mobile{
+            display: block;
+            margin-right: 20px;
+        }
+
+        .list{
+            display: none;
+            
+        }
+    }
 
 
 </style>

@@ -33,7 +33,7 @@
 
 </script>
 
-<section class="galeria">
+<section class="galeria" id="galeria">
     <div class="wrapper galeria-wrapper" id="galeria-wrapper">
         <div class="modal-container" id="modal-container">
             <div class="modal">
@@ -114,7 +114,7 @@
     }
 
     .galeria-content{
-        padding: 50px 0;
+        padding: 50px 20px;
         display: flex;
         gap: 20px;
     }
@@ -153,5 +153,18 @@
         transition: all 0.4s ease;
     }
 
+    @media screen and (max-width: 768px){
+        .galeria-content{
+            flex-direction: column;
+        }
+
+        .galeria-item img{
+            max-width: 45%;
+        }
+
+        .modal img{
+            width: 300px;
+        }
+    }
 
 </style>

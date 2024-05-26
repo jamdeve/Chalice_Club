@@ -4,6 +4,9 @@
     import slide3 from '../assets/img/chalice-slide3.jpg';
     import slide4 from '../assets/img/chalice-slide4.jpg';
 
+    import logo from '../assets/img/Logo.png';
+
+
     const images = [
         slide1,slide2,slide3,slide4
     ];
@@ -61,12 +64,14 @@
     <img class="background swing-right" id="background" src={images[currentImageIndex].src} alt="">
     <div class="wrapper hero-wrapper">
         <div class="hero-content">
+            
             <h1 class="tittle">
                 CHALICE CLUB
             </h1>
             <h2 class="subtittle">
                 Las noches más elegantes
             </h2>
+            <img class="logo" src={logo.src} width={200} height={200} alt="Logo" />
         </div>
     </div>
 </div>
@@ -76,7 +81,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Lexend:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
 
     .hero{
-        width: 100%;
+        width: 100vw;
         min-height: 100svh;
         position: relative;
         overflow: hidden;
@@ -103,7 +108,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 10px;
-        filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+        filter: drop-shadow(0 0 15px rgb(0, 0, 0));
         padding: 20px;
     }
 
@@ -128,9 +133,29 @@
         font-family: "Playfair Display", serif;
     }
 
+    .logo{
+        display: none;
+    }
+
     @keyframes shine{
         to {
             background-position: 200% center;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .background{
+            min-height: 100%;
+        }
+
+        .tittle{
+            font-size: 4rem;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo{
+            display: block;
         }
     }
 

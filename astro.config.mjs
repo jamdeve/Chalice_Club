@@ -2,6 +2,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://Jamdeve.github.io',
+    site: 'https://jamdeve.github.io',
     base: 'Chalice-Club',
   })

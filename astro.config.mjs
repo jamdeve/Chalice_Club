@@ -1,7 +1,12 @@
 import { defineConfig } from 'astro/config';
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://jamdeve.github.io',
-    base: 'Chalice-Club',
-  })
+  output: 'server',
+  outDir: './docs',
+  build: {
+    assets: 'astro'
+  },
+  adapter: netlify()
+});
